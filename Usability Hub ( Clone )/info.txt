@@ -1,1 +1,2 @@
-
+This is a frontend project that I made using HTML and CSS 
+It is a clone of website Usability Hub
