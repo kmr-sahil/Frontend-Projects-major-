@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.header {
+    width: 100%;
+    height: 50px;
+    padding: 6px;
+    background-color: gray;
+    font-size: 2rem;
+    text-align: center;
+    color: aliceblue;
+}
+
+.todoform {
+    text-align: center;
+}
+
+.inp {
+    width: 40%;
+    height: 50px;
+    border-radius: 25px;
+    border-color: rgba(128, 128, 128, 0.426);
+    margin-top: 20px;
+    padding: 0 10px;
+}
+
+.btn {
+    width: 6%;
+    height: 50px;
+    border-radius: 20px;
+    border-color: rgba(128, 128, 128, 0.426);
+    margin: 10px;
+    padding: auto;
+    background-color: transparent;
+}
+
+.todoitem{
+    margin: 20px auto;
+    width: 45%;
+    text-align: start;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-radius: 10px;
+    background-color: gray;
+}
+
+.task{
+    margin: auto;
+    width: 85%;
+}
+
+.doneBtn {
+    width: 50px;
+    height: 30px;
+    border-radius: 15px;
+}
+
+@media screen and (max-width: 991px) {
+    .inp {
+        width: 40%;
+    }
+    .btn {
+        width: 6%;
+    }
+    .todoitem{
+        width: 45%;
+    }
+    .doneBtn {
+        width: 50px;
+        border-radius: 15px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .inp {
+        width: 50%;
+    }
+    .btn {
+        width: 8%;
+    }
+    .todoitem{
+        width: 60%;
+    }
+    .doneBtn {
+        width: 40px;
+        border-radius: 12px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .inp {
+        width: 70%;
+    }
+    .btn {
+        width: 10%;
+    }
+    .todoitem{
+        width: 85%;
+    }
+    .doneBtn {
+        width: 40px;
+        border-radius: 10px;
+    }
+}
