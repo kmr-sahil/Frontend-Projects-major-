@@ -3,107 +3,146 @@
     margin: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    background-color: var(--primary-color);
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--secondary-color);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: var(--text-color);
+  }
+
+::placeholder {
+    color: var(--secondary-color);
+}
+
+:root {
+    --primary-color: #5C469C;
+    --secondary-color: #0C134F;
+    --text-color: #D4ADFC;
 }
 
 .header {
+    padding-top: 25px;
+    padding-inline: 10%;
     width: 100%;
-    height: 50px;
-    padding: 6px;
-    background-color: gray;
+    height: 80px;
+    background-color: var(--secondary-color);
     font-size: 2rem;
-    text-align: center;
-    color: aliceblue;
+    color: var(--text-color);
+    border-radius: 0px 0px 25px 25px;
+    background: var(--secondary-color);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.355);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid var(--primary-color);
 }
 
 .todoform {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.createBox {
+    margin: 20px 0;
+    width: 80%;
+    border-radius: 25px;
+    border: 3px;
+    border-style: solid;
+    border-color: var(--secondary-color);
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:space-between;
 }
 
 .inp {
-    width: 40%;
+    outline: none;
+    padding-left: 20px;
+    width: 85%;
     height: 50px;
-    border-radius: 25px;
-    border-color: rgba(128, 128, 128, 0.426);
-    margin-top: 20px;
-    padding: 0 10px;
+    border-radius: 25px 0px 0px 25px;
+    display: inline-block;
+    border-color: transparent;
+    background: var(--primary-color);
+    color: var(--text-color);
 }
 
 .btn {
-    width: 6%;
+    border-radius: 0px 25px 25px 0px;
+    width: 15%;
+    display: inline-block;
     height: 50px;
-    border-radius: 20px;
-    border-color: rgba(128, 128, 128, 0.426);
-    margin: 10px;
-    padding: auto;
-    background-color: transparent;
+    border-color: transparent;
+    background: var(--secondary-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: bolder;
 }
 
 .todoitem{
-    margin: 20px auto;
-    width: 45%;
-    text-align: start;
+
+    margin: 20px 0;
+    width: 70%;
+    border-radius: 25px;
+    border: 3px;
+    border-style: solid;
+    border-color: var(--secondary-color);
+    height: 80px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    border-radius: 10px;
-    background-color: gray;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content:space-between;
+    background: var(--secondary-color);
+    color: var(--text-color);
 }
 
 .task{
-    margin: auto;
+    padding-top: 25px;
+    padding-inline: 5%;
     width: 85%;
+    height: 80px;
+    border-radius: 25px 0px 0px 25px;
+    display: inline-block;
+    border-color: transparent;
+    background: transparent;
 }
 
 .doneBtn {
-    width: 50px;
-    height: 30px;
-    border-radius: 15px;
+    color: var(--text-color);
+    border-radius: 0px 25px 25px 0px;
+    width: 15%;
+    display: inline-block;
+    height: 80px;
+    border-color: transparent;
+    background: transparent;
 }
 
 @media screen and (max-width: 991px) {
-    .inp {
-        width: 40%;
-    }
-    .btn {
-        width: 6%;
-    }
-    .todoitem{
-        width: 45%;
-    }
-    .doneBtn {
-        width: 50px;
-        border-radius: 15px;
-    }
+    
+    
 }
 
 @media screen and (max-width: 767px) {
-    .inp {
-        width: 50%;
-    }
-    .btn {
-        width: 8%;
-    }
-    .todoitem{
-        width: 60%;
-    }
-    .doneBtn {
-        width: 40px;
-        border-radius: 12px;
-    }
+   
+   
 }
 
 @media screen and (max-width: 479px) {
-    .inp {
-        width: 70%;
-    }
-    .btn {
-        width: 10%;
-    }
-    .todoitem{
-        width: 85%;
-    }
-    .doneBtn {
-        width: 40px;
-        border-radius: 10px;
-    }
+   
+   
 }
