@@ -7,6 +7,8 @@ export default function Create() {
     const [i, setI] = useState(1)
     const [todo, setTodo] = useState("")
     const [todoList, setTodoList] = useState([])
+    const [done, setDone] = useState(0)
+
 
     const handleChange = (event) => {
         setTodo(event.target.value)
@@ -21,13 +23,15 @@ export default function Create() {
     }
   return (
     <div className={styles.todoform}>
-        <form>
-            <input className={styles.inp} type="text" onChange={handleChange} value={todo} placeholder='add Todo List'/>
-            <button className={styles.btn} type="submit" onClick={handleButton}>Add</button>
-        </form>
+        <div className={styles.createBox}>
+              <input className={styles.inp} type="text" onChange={handleChange} value={todo} placeholder='add Todo List'/>
+              <button className={styles.btn} type="submit" onClick={handleButton}>Add</button>
+          </div>
+          <p style={{fontSize: '1rem', fontWeight: 'bold',alignSelf: 'flex-start',paddingInline: '16%'}}>{todoList.length === 0 ? '': `You have ${todoList.length} tasks left`}</p>
         {todoList.map((item)=>(
-        <TodoList todoList={todoList} todoItem={item} setTodoList={setTodoList}/>
+        <TodoList done={done} setDone={setDone} todoList={todoList} todoItem={item} setTodoList={setTodoList}/>
         ))}
+          <p style={{fontSize: '1rem', fontWeight: 'bold',alignSelf: 'flex-start',paddingInline: '16%', margin: '20px 0'}}>{done === 0 ? '': `You have completed ${done} tasks`}</p>
     </div>
   )
 }
